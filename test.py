@@ -1,5 +1,5 @@
 import dataclasses
-from src.openapi_description_generator_smwa import License, Info, Description, singleton, Operation
+from src.openapi_description_generator import License, Info, Description, singleton, Operation
 from typing import Optional, List
 
 singleton.info.license = License(name="MIT")
