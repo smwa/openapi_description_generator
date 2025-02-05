@@ -6,4 +6,4 @@ The goal is to always target the most up to date version of the OpenAPI specific
 
 We currently target OAS 3.1.1
 
-`pip install openapi_description_generator`
+`pip install openapi-description-generator`
