@@ -4,6 +4,7 @@ from dataclasses import dataclass, asdict, field, Field, make_dataclass, fields,
 from typing import Optional, Any, Protocol, ClassVar, Union, get_origin, get_args, Concatenate
 import json
 from collections.abc import Mapping
+from datetime import date, datetime
 
 from dataclasses_json import config, dataclass_json
 import yaml
@@ -341,6 +342,16 @@ class Description(__openapi_repr):
     if fieldType is str:
       return {
         'type': 'string',
+      }
+    if fieldType is date:
+      return {
+        'type': 'string',
+        'format': 'date',
+      }
+    if fieldType is datetime:
+      return {
+        'type': 'string',
+        'format': 'date-time'
       }
     if fieldType is list:
       return {

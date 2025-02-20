@@ -1,6 +1,7 @@
 import dataclasses
 from src.openapi_description_generator import License, Info, Description, singleton, Operation
 from typing import Optional, List
+from datetime import datetime
 
 singleton.info.license = License(name="MIT")
 singleton.info.title = "My Test"
@@ -33,6 +34,7 @@ class ResponseSubclassExample():
 class ResponseExample():
   kerf: bool
   murph: str
+  mydate: datetime
   suub: ResponseSubclassExample
 
 
